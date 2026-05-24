@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <header class="header">
+      <div class="logo">MeuPortfólio</div>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+      </nav>
+
+      <div class="theme-buttons">
+        <button onclick="setTheme('light')">☀️</button>
+        <button onclick="setTheme('dark')">🌙</button>
+        <button onclick="setTheme('neon')">⚡</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero reveal">
+      <div class="hero-text">
+        <h1>Olá, eu sou <span>Seu Nome</span></h1>
+        <p>Desenvolvedor Front-End em evolução criando interfaces modernas.</p>
+
+        <div class="hero-buttons">
+          <a href="#projects">Ver Projetos</a>
+          <a href="#contact" class="secondary">Contato</a>
+        </div>
+      </div>
+
+      <!-- FOTO SUA -->
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/300x300" alt="Minha foto" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2>Sobre mim</h2>
+      <p>
+        Aqui você escreve sua história. Exemplo: estou aprendendo
+        desenvolvimento web, focado em front-end, criando projetos pessoais e
+        evoluindo minhas habilidades todos os dias.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git</div>
+        <div class="skill">Responsividade</div>
+        <div class="skill">APIs</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2>Projetos</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Projeto 1" />
+          <h3>Projeto 1</h3>
+          <p>Descrição do projeto aqui.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Projeto 2" />
+          <h3>Projeto 2</h3>
+          <p>Descrição do projeto aqui.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x200" alt="Projeto 3" />
+          <h3>Projeto 3</h3>
+          <p>Descrição do projeto aqui.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section reveal">
+      <h2>Educação</h2>
+      <ul class="timeline">
+        <li>Curso de HTML, CSS e JS</li>
+        <li>Aprendendo Front-End avançado</li>
+        <li>Projetos pessoais em desenvolvimento</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2>Contato</h2>
+
+      <form>
+        <input type="text" placeholder="Seu nome" />
+        <input type="email" placeholder="Seu email" />
+        <textarea placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Feito com 💻 por você</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
