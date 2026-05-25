@@ -1,125 +1,377 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Hugo De Pieri Justino — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-  <body>
-    <!-- NAV -->
-    <header class="header">
-      <div class="logo">MeuPortfólio</div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-left">
+      <span class="nav-name">VH<span class="nav-dot">.</span></span>
+    </div>
+    <div class="nav-center" id="nav-links">
+      <a href="#work">work</a>
+      <a href="#stack">stack</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-status"><span class="status-dot"></span>Available</span>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
-      </nav>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#work" onclick="closeMobile()">work</a>
+    <a href="#stack" onclick="closeMobile()">stack</a>
+    <a href="#about" onclick="closeMobile()">about</a>
+    <a href="#contact" onclick="closeMobile()">contact</a>
+  </div>
 
-      <div class="theme-buttons">
-        <button onclick="setTheme('light')">☀️</button>
-        <button onclick="setTheme('dark')">🌙</button>
-        <button onclick="setTheme('neon')">⚡</button>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-lines" aria-hidden="true">
+      <div class="hgl hgl-v1"></div>
+      <div class="hgl hgl-v2"></div>
+      <div class="hgl hgl-v3"></div>
+      <div class="hgl hgl-h1"></div>
+      <div class="hgl hgl-h2"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-meta">
+        <span class="mono chip">Full Stack Developer</span>
+        <span class="mono chip">Tubarão, SC — BR</span>
+        <span class="mono chip">18 y.o.</span>
       </div>
-    </header>
 
-    <!-- HERO -->
-    <section id="home" class="hero reveal">
-      <div class="hero-text">
-        <h1>Olá, eu sou <span>Seu Nome</span></h1>
-        <p>Desenvolvedor Front-End em evolução criando interfaces modernas.</p>
+      <h1 class="hero-title">
+        <span class="ht-line">Victor</span>
+        <span class="ht-line ht-offset">Hugo</span>
+        <span class="ht-line ht-accent">De Pieri<em class="ht-em">.</em></span>
+      </h1>
 
-        <div class="hero-buttons">
-          <a href="#projects">Ver Projetos</a>
-          <a href="#contact" class="secondary">Contato</a>
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          Engenheiro de software focado em sistemas escaláveis, modernização de legados e experiências de produto — do banco de dados à interface.
+        </p>
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">Ver projetos</a>
+          <a href="#contact" class="btn-ghost">Entre em contato</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-counter" aria-hidden="true">
+      <div class="hc-item"><span class="hc-num" data-target="3">0</span><span class="hc-label mono">anos dev</span></div>
+      <div class="hc-sep"></div>
+      <div class="hc-item"><span class="hc-num" data-target="6">0</span><span class="hc-label mono">projetos</span></div>
+      <div class="hc-sep"></div>
+      <div class="hc-item"><span class="hc-num" data-target="8">0</span><span class="hc-label mono">stacks</span></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Java</span><span class="sep">·</span>
+      <span>Spring Boot</span><span class="sep">·</span>
+      <span>React</span><span class="sep">·</span>
+      <span>Python</span><span class="sep">·</span>
+      <span>SQL</span><span class="sep">·</span>
+      <span>REST APIs</span><span class="sep">·</span>
+      <span>JSP</span><span class="sep">·</span>
+      <span>Git</span><span class="sep">·</span>
+      <span>TypeScript</span><span class="sep">·</span>
+      <span>Linux</span><span class="sep">·</span>
+      <span>Java</span><span class="sep">·</span>
+      <span>Spring Boot</span><span class="sep">·</span>
+      <span>React</span><span class="sep">·</span>
+      <span>Python</span><span class="sep">·</span>
+      <span>SQL</span><span class="sep">·</span>
+      <span>REST APIs</span><span class="sep">·</span>
+      <span>JSP</span><span class="sep">·</span>
+      <span>Git</span><span class="sep">·</span>
+      <span>TypeScript</span><span class="sep">·</span>
+      <span>Linux</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="section-header">
+      <span class="mono section-index">01</span>
+      <h2 class="section-title">Projetos</h2>
+    </div>
+
+    <div class="work-grid">
+      <!-- Featured -->
+      <article class="work-card work-featured">
+        <div class="wc-top">
+          <span class="wc-tag mono">Bootcamp · Tigre Conexões</span>
+          <span class="wc-year mono">2025</span>
+        </div>
+        <h3 class="wc-title">Sales Forecast Engine</h3>
+        <p class="wc-desc">Sistema de previsão de vendas com IA embarcada. Pipeline Python para modelagem estatística com WMAPE de ~6%, API Spring Boot servindo os dados e interface React com controle de permissões por perfil de usuário.</p>
+        <div class="wc-foot">
+          <div class="wc-stack">
+            <span>Python</span><span>Spring Boot</span><span>React</span><span>ML</span>
+          </div>
+          <div class="wc-metric">
+            <span class="metric-val">~6%</span>
+            <span class="metric-key mono">WMAPE</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="work-card">
+        <div class="wc-top">
+          <span class="wc-tag mono">Estágio · Convcard</span>
+          <span class="wc-year mono">2025–</span>
+        </div>
+        <h3 class="wc-title">Legacy Reports Migration</h3>
+        <p class="wc-desc">Modernização de relatórios críticos em JSP para controllers Java MVC. Refatoração e otimização das queries SQL nos módulos Rel_002, Rel_016 e Rel_012 — redução de complexidade e ganho de performance em produção.</p>
+        <div class="wc-foot">
+          <div class="wc-stack">
+            <span>Java</span><span>JSP</span><span>SQL</span><span>MVC</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="work-card">
+        <div class="wc-top">
+          <span class="wc-tag mono">SENAI · Curso Técnico</span>
+          <span class="wc-year mono">2024</span>
+        </div>
+        <h3 class="wc-title">Complex REST APIs — Spring Boot</h3>
+        <p class="wc-desc">Desenvolvimento aprofundado de APIs REST com Spring Boot e Java. Autenticação, controle de acesso, camadas de serviço, repositórios JPA e documentação técnica.</p>
+        <div class="wc-foot">
+          <div class="wc-stack">
+            <span>Java</span><span>Spring Boot</span><span>JPA</span><span>REST</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="work-card">
+        <div class="wc-top">
+          <span class="wc-tag mono">Pessoal</span>
+          <span class="wc-year mono">2022</span>
+        </div>
+        <h3 class="wc-title">E-commerce Identity & System</h3>
+        <p class="wc-desc">Estruturação do modelo de negócios, identidade visual e sistema de gestão para loja de cosméticos. Primeiro projeto end-to-end: do briefing ao produto funcional.</p>
+        <div class="wc-foot">
+          <div class="wc-stack">
+            <span>JavaScript</span><span>Design</span><span>Negócios</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section-alt" id="stack">
+    <div class="section-header">
+      <span class="mono section-index">02</span>
+      <h2 class="section-title">Stack</h2>
+    </div>
+
+    <div class="stack-layout">
+      <div class="stack-col">
+        <div class="stack-group">
+          <p class="sg-label mono">Back-end</p>
+          <div class="sg-items">
+            <div class="sg-item"><span class="sg-name">Java</span><div class="sg-bar"><div class="sg-fill" style="--w:92%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">Spring Boot</span><div class="sg-bar"><div class="sg-fill" style="--w:85%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">Python</span><div class="sg-bar"><div class="sg-fill" style="--w:75%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">SQL / MySQL</span><div class="sg-bar"><div class="sg-fill" style="--w:88%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">REST APIs</span><div class="sg-bar"><div class="sg-fill" style="--w:90%"></div></div></div>
+          </div>
+        </div>
+        <div class="stack-group">
+          <p class="sg-label mono">Front-end</p>
+          <div class="sg-items">
+            <div class="sg-item"><span class="sg-name">React</span><div class="sg-bar"><div class="sg-fill" style="--w:80%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">JavaScript</span><div class="sg-bar"><div class="sg-fill" style="--w:85%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">TypeScript</span><div class="sg-bar"><div class="sg-fill" style="--w:60%"></div></div></div>
+            <div class="sg-item"><span class="sg-name">HTML / CSS</span><div class="sg-bar"><div class="sg-fill" style="--w:88%"></div></div></div>
+          </div>
         </div>
       </div>
 
-      <!-- FOTO SUA -->
-      <div class="hero-image">
-        <img src="https://via.placeholder.com/300x300" alt="Minha foto" />
-      </div>
-    </section>
+      <div class="stack-divider"></div>
 
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <h2>Sobre mim</h2>
-      <p>
-        Aqui você escreve sua história. Exemplo: estou aprendendo
-        desenvolvimento web, focado em front-end, criando projetos pessoais e
-        evoluindo minhas habilidades todos os dias.
-      </p>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section reveal">
-      <h2>Skills</h2>
-
-      <div class="skills-grid">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Git</div>
-        <div class="skill">Responsividade</div>
-        <div class="skill">APIs</div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <h2>Projetos</h2>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Projeto 1" />
-          <h3>Projeto 1</h3>
-          <p>Descrição do projeto aqui.</p>
+      <div class="stack-col stack-col-right">
+        <div class="stack-group">
+          <p class="sg-label mono">Ferramentas & Infra</p>
+          <div class="sg-tags">
+            <span>Git</span><span>Linux</span><span>IntelliJ</span><span>VS Code</span><span>Postman</span><span>Maven</span>
+          </div>
         </div>
-
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Projeto 2" />
-          <h3>Projeto 2</h3>
-          <p>Descrição do projeto aqui.</p>
+        <div class="stack-group">
+          <p class="sg-label mono">Áreas de atuação</p>
+          <div class="sg-tags">
+            <span>Sistemas Legados</span><span>Modernização</span><span>Otimização SQL</span><span>Modelagem de Dados</span><span>UX / Produto</span><span>IA aplicada</span><span>CNC / Fabricação</span>
+          </div>
         </div>
-
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Projeto 3" />
-          <h3>Projeto 3</h3>
-          <p>Descrição do projeto aqui.</p>
+        <div class="stack-group">
+          <p class="sg-label mono">Abordagem técnica</p>
+          <blockquote class="stack-quote">
+            "Mapear o comportamento da tela primeiro, depois mergulhar na estrutura do código — early return, queries enxutas, reutilização de funções do próprio sistema. A primeira versão tem que funcionar; refatoração vem depois."
+          </blockquote>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EDUCATION -->
-    <section class="section reveal">
-      <h2>Educação</h2>
-      <ul class="timeline">
-        <li>Curso de HTML, CSS e JS</li>
-        <li>Aprendendo Front-End avançado</li>
-        <li>Projetos pessoais em desenvolvimento</li>
-      </ul>
-    </section>
+  <!-- ABOUT / TIMELINE -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <span class="mono section-index">03</span>
+      <h2 class="section-title">Trajetória</h2>
+    </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section reveal">
-      <h2>Contato</h2>
+    <div class="about-layout">
+      <div class="about-text-col">
+        <p class="about-lead">Comecei a trabalhar com tecnologia aos 14 anos — não por acaso, mas por escolha deliberada de financiar meu próprio desenvolvimento. Cada etapa foi construída em cima da anterior, mesmo quando a trajetória exigiu desvios.</p>
+        <p>Sou o tipo de desenvolvedor que lê o código da empresa antes de escrever uma linha. Entendo que sistemas legados têm história, lógica e razões — e que modernizá-los exige tanto respeito quanto pragmatismo. Opero bem em ambientes de alta incerteza e entrego o que prometo.</p>
+        <p>Fui o único aluno do ensino médio a se destacar na trilha Full Stack do programa Jovem Desenvolvedor da Trier Sistemas em 2025 — o que me levou diretamente ao mercado antes de terminar o colegial.</p>
+        <div class="about-pills">
+          <span class="pill">Proativo</span>
+          <span class="pill">Autodidata</span>
+          <span class="pill">Orientado a entrega</span>
+          <span class="pill">Comunicação clara</span>
+          <span class="pill">Alta resiliência</span>
+        </div>
+      </div>
 
-      <form>
-        <input type="text" placeholder="Seu nome" />
-        <input type="email" placeholder="Seu email" />
-        <textarea placeholder="Sua mensagem"></textarea>
-        <button type="submit">Enviar</button>
+      <div class="timeline-col">
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-year mono">2021</div>
+            <div class="tl-body">
+              <div class="tl-title">Hardware & Infraestrutura</div>
+              <div class="tl-desc">Montagem e manutenção de computadores. Primeiro contato formal com tecnologia — financiado com o próprio dinheiro.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year mono">2022</div>
+            <div class="tl-body">
+              <div class="tl-title">Lógica de Programação — JavaScript</div>
+              <div class="tl-desc">Base em algoritmia e estruturas fundamentais. Primeiro código real.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year mono">2023</div>
+            <div class="tl-body">
+              <div class="tl-title">Jovem Aprendiz — Aludim Alumínios (TI)</div>
+              <div class="tl-desc">Primeira experiência profissional. Bolsa integral SESI pelo desempenho.</div>
+              <div class="tl-badge">bolsa integral</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year mono">2024</div>
+            <div class="tl-body">
+              <div class="tl-title">F1 in Schools · CNC Laser · SESI</div>
+              <div class="tl-desc">Simulações de engenharia (Steam Racing). Projetos de corte CNC a laser. Ensino médio com bolsa integral.</div>
+            </div>
+          </div>
+          <div class="tl-item tl-highlight">
+            <div class="tl-year mono">2025</div>
+            <div class="tl-body">
+              <div class="tl-title">Trier Sistemas — Jovem Desenvolvedor</div>
+              <div class="tl-desc">Único aluno do ensino médio na trilha Full Stack. Bootcamp Tigre Conexões. 1º lugar IFSC (matrícula indeferida por cotas).</div>
+              <div class="tl-badge tl-badge-accent">destaque</div>
+            </div>
+          </div>
+          <div class="tl-item tl-current">
+            <div class="tl-year mono">2025–</div>
+            <div class="tl-body">
+              <div class="tl-title">Estágio Dev — Convcard</div>
+              <div class="tl-desc">Modernização de sistemas críticos em produção. Java, SQL, arquitetura MVC.</div>
+              <div class="tl-badge tl-badge-live">atual</div>
+            </div>
+          </div>
+          <div class="tl-item tl-current">
+            <div class="tl-year mono">2026–</div>
+            <div class="tl-body">
+              <div class="tl-title">Tecnólogo ADS — SENAI (bolsa 70%)</div>
+              <div class="tl-desc">Análise e Desenvolvimento de Sistemas. Bolsa conquistada por reconhecimento de desempenho.</div>
+              <div class="tl-badge tl-badge-live">cursando</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="section-header">
+      <span class="mono section-index">04</span>
+      <h2 class="section-title">Contato</h2>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-left">
+        <p class="contact-lead">Aberto a novas oportunidades — estágios, projetos freelance ou apenas uma conversa técnica.</p>
+        <div class="contact-links">
+          <a href="mailto:victor@email.com" class="c-link">
+            <span class="c-link-label mono">email</span>
+            <span class="c-link-val">victor@email.com</span>
+            <span class="c-link-arrow">→</span>
+          </a>
+          <a href="#" class="c-link">
+            <span class="c-link-label mono">linkedin</span>
+            <span class="c-link-val">Victor Hugo De Pieri Justino</span>
+            <span class="c-link-arrow">→</span>
+          </a>
+          <a href="#" class="c-link">
+            <span class="c-link-label mono">github</span>
+            <span class="c-link-val">github.com/victor-depieri</span>
+            <span class="c-link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="cf-row">
+          <div class="cf-group">
+            <label class="mono">nome</label>
+            <input type="text" placeholder="Seu nome" required />
+          </div>
+          <div class="cf-group">
+            <label class="mono">email</label>
+            <input type="email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+        <div class="cf-group">
+          <label class="mono">mensagem</label>
+          <textarea placeholder="Contexto da oportunidade ou projeto..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar mensagem</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <p>Feito com 💻 por você</p>
-    </footer>
+  <footer class="footer">
+    <span class="mono">Victor Hugo De Pieri Justino — 2025</span>
+    <span class="mono footer-sep">·</span>
+    <span class="mono">Tubarão, SC</span>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
